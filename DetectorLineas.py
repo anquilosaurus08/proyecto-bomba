@@ -22,8 +22,10 @@ class Template(object):
 		self.move = 'none'
 
 	def procesar_img(self, img):
-		bridge = CvBridge()
 		d = 40
+		
+		bridge = CvBridge()
+		
 		image = bridge.imgmsg_to_cv2(img, 'bgr8') #320x240
 
 		gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
